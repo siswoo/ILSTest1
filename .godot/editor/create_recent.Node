@@ -1,0 +1,17 @@
+Label
+Node2D
+Timer
+Control
+Node
+TextureRect
+Panel
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
+Camera2D
+ParallaxBackground
+Sprite2D
+MarginContainer
+CanvasLayer
+AnimationPlayer
+Button

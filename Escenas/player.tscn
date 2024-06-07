@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://djratwwm4s7k4"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_3fsor"]
+[ext_resource type="Texture2D" uid="uid://6ubnho284m42" path="res://Imagenes/Sprite1.png" id="2_8viak"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72df8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyb30"]
+atlas = ExtResource("2_8viak")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6shof"]
+atlas = ExtResource("2_8viak")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exyou"]
+atlas = ExtResource("2_8viak")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3v1df"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyb30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6shof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exyou")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_3fsor")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_72df8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3v1df")
+animation = &"idle"
+autoplay = "idle"

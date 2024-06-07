@@ -1,0 +1,899 @@
+[gd_scene load_steps=11 format=3 uid="uid://bful0l14oh1o4"]
+
+[ext_resource type="Script" path="res://Scripts/principal.gd" id="1_anwkp"]
+[ext_resource type="Texture2D" uid="uid://cwncr8na4g0d3" path="res://Imagenes/fondo1.jpg" id="2_rnkp3"]
+[ext_resource type="PackedScene" uid="uid://djratwwm4s7k4" path="res://Escenas/player.tscn" id="3_ewf6b"]
+[ext_resource type="PackedScene" uid="uid://dj0ku5gd6f7p3" path="res://Escenas/enemy.tscn" id="4_djvmd"]
+[ext_resource type="Texture2D" uid="uid://b44wwitfdrhat" path="res://Imagenes/CaraPlayer1.png" id="5_r3n2c"]
+[ext_resource type="Texture2D" uid="uid://c156ttlubdgmt" path="res://Imagenes/interrogacion1.png" id="6_vfhvf"]
+[ext_resource type="Texture2D" uid="uid://cmx588hlqasfn" path="res://Imagenes/cuadro1.png" id="7_0motr"]
+[ext_resource type="Texture2D" uid="uid://d4ado1l2si0x5" path="res://Imagenes/CaraEnemigo1.png" id="7_hjdr0"]
+[ext_resource type="PackedScene" uid="uid://co1v3r1maay1t" path="res://Escenas/carta.tscn" id="9_v6ayt"]
+[ext_resource type="Texture2D" uid="uid://bpfwn451y7hic" path="res://Imagenes/flechasRuletaOff.png" id="10_mxpww"]
+
+[node name="Principal" type="Node2D"]
+script = ExtResource("1_anwkp")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_rnkp3")
+
+[node name="player" parent="." instance=ExtResource("3_ewf6b")]
+position = Vector2(-130, 80)
+scale = Vector2(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_djvmd")]
+position = Vector2(130, 80)
+scale = Vector2(3, 3)
+
+[node name="HUD_jugador" type="Node" parent="."]
+
+[node name="co1" type="TextureRect" parent="HUD_jugador"]
+offset_left = -450.0
+offset_top = -248.0
+offset_right = -420.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co2" type="TextureRect" parent="HUD_jugador"]
+offset_left = -420.0
+offset_top = -248.0
+offset_right = -390.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co3" type="TextureRect" parent="HUD_jugador"]
+offset_left = -390.0
+offset_top = -248.0
+offset_right = -360.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co4" type="TextureRect" parent="HUD_jugador"]
+offset_left = -360.0
+offset_top = -248.0
+offset_right = -330.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co5" type="TextureRect" parent="HUD_jugador"]
+offset_left = -330.0
+offset_top = -248.0
+offset_right = -300.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co6" type="TextureRect" parent="HUD_jugador"]
+offset_left = -300.0
+offset_top = -248.0
+offset_right = -270.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co7" type="TextureRect" parent="HUD_jugador"]
+offset_left = -270.0
+offset_top = -248.0
+offset_right = -240.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co8" type="TextureRect" parent="HUD_jugador"]
+offset_left = -240.0
+offset_top = -248.0
+offset_right = -210.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co9" type="TextureRect" parent="HUD_jugador"]
+offset_left = -210.0
+offset_top = -248.0
+offset_right = -180.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co10" type="TextureRect" parent="HUD_jugador"]
+offset_left = -180.0
+offset_top = -248.0
+offset_right = -150.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="HUD_jugador"]
+offset_left = -470.0
+offset_top = -210.0
+offset_right = -390.0
+offset_bottom = -130.0
+
+[node name="CaraJugador" type="TextureRect" parent="HUD_jugador/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_r3n2c")
+
+[node name="Accion0" type="Panel" parent="HUD_jugador"]
+offset_left = -380.0
+offset_top = -190.0
+offset_right = -330.0
+offset_bottom = -140.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_jugador/Accion0"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="imagen" type="TextureRect" parent="HUD_jugador/Accion0"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfhvf")
+expand_mode = 1
+
+[node name="Accion1" type="Panel" parent="HUD_jugador"]
+offset_left = -320.0
+offset_top = -190.0
+offset_right = -270.0
+offset_bottom = -140.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_jugador/Accion1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="imagen" type="TextureRect" parent="HUD_jugador/Accion1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfhvf")
+expand_mode = 1
+
+[node name="Accion2" type="Panel" parent="HUD_jugador"]
+offset_left = -260.0
+offset_top = -190.0
+offset_right = -210.0
+offset_bottom = -140.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_jugador/Accion2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="imagen" type="TextureRect" parent="HUD_jugador/Accion2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfhvf")
+expand_mode = 1
+
+[node name="TemporalDaño" type="Panel" parent="HUD_jugador"]
+offset_left = -460.0
+offset_top = -110.0
+offset_right = -410.0
+offset_bottom = -60.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_jugador/TemporalDaño"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="Label" type="Label" parent="HUD_jugador/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "- 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TemporalCura" type="Panel" parent="HUD_jugador"]
+offset_left = -460.0
+offset_top = -40.0
+offset_right = -410.0
+offset_bottom = 10.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_jugador/TemporalCura"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="Label" type="Label" parent="HUD_jugador/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+ 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TemporalBonus" type="Panel" parent="HUD_jugador"]
+offset_left = -460.0
+offset_top = 30.0
+offset_right = -410.0
+offset_bottom = 80.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_jugador/TemporalBonus"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="Label" type="Label" parent="HUD_jugador/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "> 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HUD_enemigo" type="Node" parent="."]
+
+[node name="co1" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 420.0
+offset_top = -248.0
+offset_right = 450.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co2" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 390.0
+offset_top = -248.0
+offset_right = 420.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co3" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 360.0
+offset_top = -248.0
+offset_right = 390.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co4" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 330.0
+offset_top = -248.0
+offset_right = 360.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co5" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 300.0
+offset_top = -248.0
+offset_right = 330.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co6" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 270.0
+offset_top = -248.0
+offset_right = 300.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co7" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 240.0
+offset_top = -248.0
+offset_right = 270.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co8" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 210.0
+offset_top = -248.0
+offset_right = 240.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co9" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 180.0
+offset_top = -248.0
+offset_right = 210.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="co10" type="TextureRect" parent="HUD_enemigo"]
+offset_left = 150.0
+offset_top = -248.0
+offset_right = 180.0
+offset_bottom = -218.0
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="HUD_enemigo"]
+offset_left = 370.0
+offset_top = -210.0
+offset_right = 450.0
+offset_bottom = -130.0
+
+[node name="CaraEnemigo" type="TextureRect" parent="HUD_enemigo/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_hjdr0")
+
+[node name="Accion0" type="Panel" parent="HUD_enemigo"]
+offset_left = 320.0
+offset_top = -190.0
+offset_right = 370.0
+offset_bottom = -140.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_enemigo/Accion0"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="imagen" type="TextureRect" parent="HUD_enemigo/Accion0"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfhvf")
+expand_mode = 1
+
+[node name="Accion1" type="Panel" parent="HUD_enemigo"]
+offset_left = 260.0
+offset_top = -190.0
+offset_right = 310.0
+offset_bottom = -140.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_enemigo/Accion1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="imagen" type="TextureRect" parent="HUD_enemigo/Accion1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfhvf")
+expand_mode = 1
+
+[node name="Accion2" type="Panel" parent="HUD_enemigo"]
+offset_left = 200.0
+offset_top = -190.0
+offset_right = 250.0
+offset_bottom = -140.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_enemigo/Accion2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="imagen" type="TextureRect" parent="HUD_enemigo/Accion2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfhvf")
+expand_mode = 1
+
+[node name="TemporalDaño" type="Panel" parent="HUD_enemigo"]
+offset_left = 390.0
+offset_top = -110.0
+offset_right = 440.0
+offset_bottom = -60.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_enemigo/TemporalDaño"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="Label" type="Label" parent="HUD_enemigo/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "- 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TemporalCura" type="Panel" parent="HUD_enemigo"]
+offset_left = 390.0
+offset_top = -40.0
+offset_right = 440.0
+offset_bottom = 10.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_enemigo/TemporalCura"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="Label" type="Label" parent="HUD_enemigo/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+ 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TemporalBonus" type="Panel" parent="HUD_enemigo"]
+offset_left = 390.0
+offset_top = 30.0
+offset_right = 440.0
+offset_bottom = 80.0
+
+[node name="cuadro" type="TextureRect" parent="HUD_enemigo/TemporalBonus"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0motr")
+
+[node name="Label" type="Label" parent="HUD_enemigo/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "> 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fase" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = -200.0
+offset_right = 63.0
+offset_bottom = -140.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.862745, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "PELEAR"
+
+[node name="Tiempo" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_top = -160.0
+offset_right = 68.0
+offset_bottom = -100.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="CartasJugador" type="Node" parent="."]
+
+[node name="Carta0" parent="CartasJugador" instance=ExtResource("9_v6ayt")]
+offset_left = -876.0
+offset_top = -424.0
+offset_right = -792.0
+offset_bottom = -340.0
+
+[node name="Carta1" parent="CartasJugador" instance=ExtResource("9_v6ayt")]
+offset_left = -776.0
+offset_top = -424.0
+offset_right = -692.0
+offset_bottom = -340.0
+
+[node name="Carta2" parent="CartasJugador" instance=ExtResource("9_v6ayt")]
+offset_left = -676.0
+offset_top = -424.0
+offset_right = -592.0
+offset_bottom = -340.0
+
+[node name="Carta3" parent="CartasJugador" instance=ExtResource("9_v6ayt")]
+offset_left = -576.0
+offset_top = -424.0
+offset_right = -492.0
+offset_bottom = -340.0
+
+[node name="Carta4" parent="CartasJugador" instance=ExtResource("9_v6ayt")]
+offset_left = -476.0
+offset_top = -424.0
+offset_right = -392.0
+offset_bottom = -340.0
+
+[node name="Carta5" parent="CartasJugador" instance=ExtResource("9_v6ayt")]
+offset_left = -376.0
+offset_top = -424.0
+offset_right = -292.0
+offset_bottom = -340.0
+
+[node name="CartasEnemigo" type="Node" parent="."]
+
+[node name="Carta0" parent="CartasEnemigo" instance=ExtResource("9_v6ayt")]
+offset_left = -876.0
+offset_top = -224.0
+offset_right = -792.0
+offset_bottom = -140.0
+
+[node name="Carta1" parent="CartasEnemigo" instance=ExtResource("9_v6ayt")]
+offset_left = -776.0
+offset_top = -224.0
+offset_right = -692.0
+offset_bottom = -140.0
+
+[node name="Carta2" parent="CartasEnemigo" instance=ExtResource("9_v6ayt")]
+offset_left = -676.0
+offset_top = -224.0
+offset_right = -592.0
+offset_bottom = -140.0
+
+[node name="Carta3" parent="CartasEnemigo" instance=ExtResource("9_v6ayt")]
+offset_left = -576.0
+offset_top = -224.0
+offset_right = -492.0
+offset_bottom = -140.0
+
+[node name="Carta4" parent="CartasEnemigo" instance=ExtResource("9_v6ayt")]
+offset_left = -476.0
+offset_top = -224.0
+offset_right = -392.0
+offset_bottom = -140.0
+
+[node name="Carta5" parent="CartasEnemigo" instance=ExtResource("9_v6ayt")]
+offset_left = -376.0
+offset_top = -224.0
+offset_right = -292.0
+offset_bottom = -140.0
+
+[node name="Ruletas" type="Node" parent="."]
+
+[node name="Ruleta0" type="TextureRect" parent="Ruletas"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -866.0
+offset_top = -324.0
+offset_right = -802.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_mxpww")
+expand_mode = 1
+
+[node name="Ruleta1" type="TextureRect" parent="Ruletas"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -766.0
+offset_top = -324.0
+offset_right = -702.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_mxpww")
+expand_mode = 1
+
+[node name="Ruleta2" type="TextureRect" parent="Ruletas"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -666.0
+offset_top = -324.0
+offset_right = -602.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_mxpww")
+expand_mode = 1
+
+[node name="Ruleta3" type="TextureRect" parent="Ruletas"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -566.0
+offset_top = -324.0
+offset_right = -502.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_mxpww")
+expand_mode = 1
+
+[node name="Ruleta4" type="TextureRect" parent="Ruletas"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -466.0
+offset_top = -324.0
+offset_right = -402.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_mxpww")
+expand_mode = 1
+
+[node name="Ruleta5" type="TextureRect" parent="Ruletas"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -324.0
+offset_right = -302.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_mxpww")
+expand_mode = 1
+
+[node name="InfoJugador" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="InfoJugador"]
+offset_left = -120.0
+offset_top = -30.0
+offset_right = -80.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoEnemigo" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="InfoEnemigo"]
+offset_left = 80.0
+offset_top = -30.0
+offset_right = 120.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CondicionJuego" type="Node2D" parent="."]
+visible = false
+
+[node name="jugadorMuerto" type="Label" parent="CondicionJuego"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -141.5
+offset_right = 241.0
+offset_bottom = 141.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "HAS MUERTO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemigoMuerto" type="Label" parent="CondicionJuego"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -141.5
+offset_right = 241.0
+offset_bottom = 141.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "HAS GANADO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
