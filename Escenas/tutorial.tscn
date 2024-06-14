@@ -1,0 +1,1098 @@
+[gd_scene load_steps=25 format=3 uid="uid://b4y07jjqnfayq"]
+
+[ext_resource type="Script" path="res://Escenas/tutorial.gd" id="1_qjl26"]
+[ext_resource type="Texture2D" uid="uid://bo7usl8idhyt3" path="res://Imagenes/castle bridge.png" id="1_sfxx7"]
+[ext_resource type="Texture2D" uid="uid://8sfvmb8ul5hi" path="res://Imagenes/flechaDerecha.png" id="2_2bgym"]
+[ext_resource type="Texture2D" uid="uid://blkqt8ist5iol" path="res://Imagenes/vidaLlena.png" id="4_lc37i"]
+[ext_resource type="Texture2D" uid="uid://b44wwitfdrhat" path="res://Imagenes/CaraPlayer1.png" id="5_c2e1t"]
+[ext_resource type="Texture2D" uid="uid://d4ado1l2si0x5" path="res://Imagenes/CaraEnemigo1.png" id="6_35asv"]
+[ext_resource type="Texture2D" uid="uid://cilhtlcs5huwi" path="res://Imagenes/vidaVacia.png" id="7_dhofk"]
+[ext_resource type="Texture2D" uid="uid://385ndpslp3wf" path="res://Imagenes/vidaEscudo.png" id="8_e4na7"]
+[ext_resource type="Texture2D" uid="uid://dsxqlart4ym3t" path="res://Imagenes/ejemplo1.PNG" id="9_bx1mo"]
+[ext_resource type="Texture2D" uid="uid://da1b0cvubaghc" path="res://Imagenes/ejemplo2.PNG" id="9_noyvd"]
+[ext_resource type="Texture2D" uid="uid://cch2xyk6yyji4" path="res://Imagenes/ataque.png" id="11_7c6o2"]
+[ext_resource type="Texture2D" uid="uid://bgely3jlywmil" path="res://Imagenes/curar.png" id="12_s1n3p"]
+[ext_resource type="Texture2D" uid="uid://bpvxdtgjol40" path="res://Imagenes/regeneracion.png" id="13_t7meg"]
+[ext_resource type="Texture2D" uid="uid://c7cgge02hksf3" path="res://Imagenes/envenenar.png" id="14_2tnrl"]
+[ext_resource type="Texture2D" uid="uid://b55wyx750dv16" path="res://Imagenes/aumentarDaño.png" id="15_iguji"]
+[ext_resource type="Texture2D" uid="uid://cq6yu6bh756qy" path="res://Imagenes/ejemplo3.PNG" id="16_yyi18"]
+[ext_resource type="Texture2D" uid="uid://bvre5lpj3qxvw" path="res://Imagenes/ejemplo4.PNG" id="17_4s7x4"]
+[ext_resource type="Texture2D" uid="uid://by7a474wwiscc" path="res://Imagenes/ejemplo5.PNG" id="18_olk5m"]
+[ext_resource type="Texture2D" uid="uid://bdq1e3ct5ypbh" path="res://Imagenes/ejemplo6.PNG" id="19_t7xsa"]
+[ext_resource type="Texture2D" uid="uid://cmx588hlqasfn" path="res://Imagenes/cuadro1.png" id="20_4o8he"]
+[ext_resource type="Texture2D" uid="uid://cf1m3wuxspr1a" path="res://Imagenes/calavera1.png" id="21_p31vc"]
+[ext_resource type="Texture2D" uid="uid://cfyd3nhhyrxw2" path="res://Imagenes/recuperaSalud1.png" id="22_ewrkh"]
+[ext_resource type="Texture2D" uid="uid://bv6auu7a2nem2" path="res://Imagenes/aumento1.png" id="23_d2lsp"]
+[ext_resource type="Texture2D" uid="uid://3x8rdeh2pifn" path="res://Imagenes/boton2.png" id="24_sijwu"]
+
+[node name="tutorial" type="Node2D"]
+script = ExtResource("1_qjl26")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fondo" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(0.32549, 0.32549, 0.32549, 1)
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sfxx7")
+expand_mode = 1
+
+[node name="Tuto1" type="Node" parent="CanvasLayer"]
+
+[node name="Texto" type="RichTextLabel" parent="CanvasLayer/Tuto1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Tener en consideración: 
+		[color=blue]*1_[/color] Si termina el tiempo y no has elegido tres acciones, se te aplicara 1 de daño por cada acción faltante (ejemplo: -3 corazones)
+		[color=blue]*2_[/color] Ganas si los corazones del enemigo estan todos vacios
+		[color=blue]*3_[/color] Pierdes si tus corazones estan todos vacios [/center]"
+fit_content = true
+
+[node name="SiguienteB" type="Button" parent="CanvasLayer/Tuto1"]
+offset_left = 900.0
+offset_top = 500.0
+offset_right = 960.0
+offset_bottom = 560.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="SiguienteImg" type="TextureRect" parent="CanvasLayer/Tuto1/SiguienteB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2bgym")
+expand_mode = 1
+
+[node name="AtrasB" type="Button" parent="CanvasLayer/Tuto1"]
+offset_left = 200.0
+offset_top = 500.0
+offset_right = 260.0
+offset_bottom = 560.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="AtrasImg" type="TextureRect" parent="CanvasLayer/Tuto1/AtrasB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2bgym")
+expand_mode = 1
+flip_h = true
+
+[node name="VidasJugador" type="Node" parent="CanvasLayer"]
+
+[node name="co1" type="TextureRect" parent="CanvasLayer/VidasJugador"]
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 90.0
+offset_bottom = 60.0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co2" type="TextureRect" parent="CanvasLayer/VidasJugador"]
+offset_left = 100.0
+offset_top = 20.0
+offset_right = 140.0
+offset_bottom = 60.0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co3" type="TextureRect" parent="CanvasLayer/VidasJugador"]
+offset_left = 150.0
+offset_top = 20.0
+offset_right = 190.0
+offset_bottom = 60.0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co4" type="TextureRect" parent="CanvasLayer/VidasJugador"]
+offset_left = 200.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 60.0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co5" type="TextureRect" parent="CanvasLayer/VidasJugador"]
+offset_left = 250.0
+offset_top = 20.0
+offset_right = 290.0
+offset_bottom = 60.0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/VidasJugador"]
+visible = false
+offset_left = 20.0
+offset_right = 60.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VidasEnemigo" type="Node" parent="CanvasLayer"]
+
+[node name="co1" type="TextureRect" parent="CanvasLayer/VidasEnemigo"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 20.0
+offset_right = -62.0
+offset_bottom = 60.0
+grow_horizontal = 0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co2" type="TextureRect" parent="CanvasLayer/VidasEnemigo"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_top = 20.0
+offset_right = -112.0
+offset_bottom = 60.0
+grow_horizontal = 0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co3" type="TextureRect" parent="CanvasLayer/VidasEnemigo"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -202.0
+offset_top = 20.0
+offset_right = -162.0
+offset_bottom = 60.0
+grow_horizontal = 0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co4" type="TextureRect" parent="CanvasLayer/VidasEnemigo"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -252.0
+offset_top = 20.0
+offset_right = -212.0
+offset_bottom = 60.0
+grow_horizontal = 0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="co5" type="TextureRect" parent="CanvasLayer/VidasEnemigo"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -302.0
+offset_top = 20.0
+offset_right = -262.0
+offset_bottom = 60.0
+grow_horizontal = 0
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/VidasEnemigo"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -352.0
+offset_right = -312.0
+offset_bottom = 58.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IconoJugador" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 100.0
+offset_bottom = 160.0
+texture = ExtResource("5_c2e1t")
+expand_mode = 1
+
+[node name="IconoEnemigo" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 80.0
+offset_right = -22.0
+offset_bottom = 160.0
+grow_horizontal = 0
+texture = ExtResource("6_35asv")
+expand_mode = 1
+
+[node name="CorazonVacio" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 120.0
+offset_top = -74.0
+offset_right = 200.0
+offset_bottom = 6.0
+grow_vertical = 2
+texture = ExtResource("7_dhofk")
+expand_mode = 1
+
+[node name="CorazonRojo" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 120.0
+offset_top = 76.0
+offset_right = 200.0
+offset_bottom = 156.0
+grow_vertical = 2
+texture = ExtResource("4_lc37i")
+expand_mode = 1
+
+[node name="CorazonAzul" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -34.0
+offset_right = -122.0
+offset_bottom = 46.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("8_e4na7")
+expand_mode = 1
+
+[node name="ejemplo1" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -248.0
+offset_right = 300.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("9_bx1mo")
+expand_mode = 1
+
+[node name="ejemplo2" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 109.0
+offset_top = -124.0
+offset_right = 259.0
+offset_bottom = 176.0
+grow_vertical = 2
+texture = ExtResource("9_noyvd")
+expand_mode = 1
+
+[node name="cartaDaño" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -124.0
+offset_right = 190.0
+offset_bottom = -44.0
+grow_vertical = 2
+texture = ExtResource("11_7c6o2")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/cartaDaño"]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="cartaCurar" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 106.0
+grow_vertical = 2
+texture = ExtResource("12_s1n3p")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/cartaCurar"]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "2"
+
+[node name="cartaRegeneracion" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 176.0
+offset_right = 130.0
+offset_bottom = 256.0
+grow_vertical = 2
+texture = ExtResource("13_t7meg")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/cartaRegeneracion"]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "3"
+
+[node name="cartaVeneno" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -124.0
+offset_right = -122.0
+offset_bottom = -44.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("14_2tnrl")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/cartaVeneno"]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "4"
+
+[node name="cartaPotencia" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 26.0
+offset_right = -72.0
+offset_bottom = 106.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("15_iguji")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/cartaPotencia"]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "5"
+
+[node name="ejemplo3" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -174.0
+offset_right = 230.0
+offset_bottom = 126.0
+grow_vertical = 2
+texture = ExtResource("16_yyi18")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/ejemplo3"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ejemplo4" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -204.0
+offset_right = -82.0
+offset_bottom = -84.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("17_4s7x4")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/ejemplo4"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ejemplo5" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -24.0
+offset_right = -32.0
+offset_bottom = 276.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("18_olk5m")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/ejemplo5"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ejemplo6" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -348.0
+offset_right = 90.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("19_t7xsa")
+expand_mode = 1
+
+[node name="temporalesJugador" type="Node" parent="CanvasLayer"]
+
+[node name="TemporalDaño" type="Panel" parent="CanvasLayer/temporalesJugador"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -124.0
+offset_right = 70.0
+offset_bottom = -74.0
+grow_vertical = 2
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/temporalesJugador/TemporalDaño"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/temporalesJugador/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icono" type="TextureRect" parent="CanvasLayer/temporalesJugador/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -20.0
+offset_right = 75.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_p31vc")
+expand_mode = 1
+
+[node name="TemporalCura" type="Panel" parent="CanvasLayer/temporalesJugador"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -54.0
+offset_right = 70.0
+offset_bottom = -4.0
+grow_vertical = 2
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/temporalesJugador/TemporalCura"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/temporalesJugador/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icono" type="TextureRect" parent="CanvasLayer/temporalesJugador/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -20.0
+offset_right = 75.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_ewrkh")
+expand_mode = 1
+
+[node name="TemporalBonus" type="Panel" parent="CanvasLayer/temporalesJugador"]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 70.0
+offset_bottom = 66.0
+grow_vertical = 2
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/temporalesJugador/TemporalBonus"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/temporalesJugador/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icono" type="TextureRect" parent="CanvasLayer/temporalesJugador/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -20.0
+offset_right = 75.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_d2lsp")
+expand_mode = 1
+
+[node name="temporalesEnemigo" type="Node" parent="CanvasLayer"]
+
+[node name="TemporalDaño" type="Panel" parent="CanvasLayer/temporalesEnemigo"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -124.0
+offset_right = -22.0
+offset_bottom = -74.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/temporalesEnemigo/TemporalDaño"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/temporalesEnemigo/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icono" type="TextureRect" parent="CanvasLayer/temporalesEnemigo/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -20.0
+offset_right = -45.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_p31vc")
+expand_mode = 1
+
+[node name="TemporalCura" type="Panel" parent="CanvasLayer/temporalesEnemigo"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -54.0
+offset_right = -22.0
+offset_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/temporalesEnemigo/TemporalCura"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/temporalesEnemigo/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icono" type="TextureRect" parent="CanvasLayer/temporalesEnemigo/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -20.0
+offset_right = -45.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_ewrkh")
+expand_mode = 1
+
+[node name="TemporalBonus" type="Panel" parent="CanvasLayer/temporalesEnemigo"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 16.0
+offset_right = -22.0
+offset_bottom = 66.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/temporalesEnemigo/TemporalBonus"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/temporalesEnemigo/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icono" type="TextureRect" parent="CanvasLayer/temporalesEnemigo/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -20.0
+offset_right = -45.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_d2lsp")
+expand_mode = 1
+
+[node name="accionesJugador" type="Node" parent="CanvasLayer"]
+
+[node name="Accion0" type="Panel" parent="CanvasLayer/accionesJugador"]
+visible = false
+offset_left = 100.0
+offset_top = 90.0
+offset_right = 150.0
+offset_bottom = 140.0
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/accionesJugador/Accion0"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/accionesJugador/Accion0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "-1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Accion1" type="Panel" parent="CanvasLayer/accionesJugador"]
+visible = false
+offset_left = 170.0
+offset_top = 90.0
+offset_right = 220.0
+offset_bottom = 140.0
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/accionesJugador/Accion1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/accionesJugador/Accion1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "-2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Accion2" type="Panel" parent="CanvasLayer/accionesJugador"]
+visible = false
+offset_left = 240.0
+offset_top = 90.0
+offset_right = 290.0
+offset_bottom = 140.0
+
+[node name="cuadro" type="TextureRect" parent="CanvasLayer/accionesJugador/Accion2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4o8he")
+
+[node name="Label" type="Label" parent="CanvasLayer/accionesJugador/Accion2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -13.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "-3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/accionesJugador"]
+visible = false
+offset_left = 70.0
+offset_top = 55.0
+offset_right = 110.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IniciarB" type="Button" parent="CanvasLayer"]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -148.0
+offset_right = -52.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/IniciarB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_sijwu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/IniciarB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "INICIAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OmitirB" type="Button" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -148.0
+offset_right = 200.0
+offset_bottom = -48.0
+grow_vertical = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/OmitirB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_sijwu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/OmitirB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Omitir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Tuto1/SiguienteB" to="." method="_on_siguiente_b_pressed"]
+[connection signal="pressed" from="CanvasLayer/Tuto1/AtrasB" to="." method="_on_atras_b_pressed"]
+[connection signal="pressed" from="CanvasLayer/IniciarB" to="." method="_on_iniciar_b_pressed"]
+[connection signal="pressed" from="CanvasLayer/OmitirB" to="." method="_on_omitir_b_pressed"]

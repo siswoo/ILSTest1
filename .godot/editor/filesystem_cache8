@@ -1,34 +1,60 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717725781
+::res://::1718379925
+export_presets.cfg::TextFile::-1::1717727266::0::1::::<><>::
 icon.svg::CompressedTexture2D::2654236420108110349::1717179897::1717179905::1::::<><>::
-::res://Escenas/::1717720665
-carta.tscn::PackedScene::5810484992608763495::1717720049::0::1::::<><>::uid://hm1ch2apnt2g::::res://Imagenes/Carta1.png
-enemy.tscn::PackedScene::7843215558626149138::1717720049::0::1::::<><>::uid://cgo8trpjcuqpn::::res://Imagenes/Sprite2.png<>res://Scripts/enemy.gd
-player.tscn::PackedScene::7826091185808927825::1717720049::0::1::::<><>::res://Scripts/player.gd<>uid://6ubnho284m42::::res://Imagenes/Sprite1.png
-principal.tscn::PackedScene::2779365607990920089::1717720665::0::1::::<><>::res://Scripts/principal.gd<>uid://cwncr8na4g0d3::::res://Imagenes/fondo1.jpg<>uid://djratwwm4s7k4::::res://Escenas/player.tscn<>uid://dj0ku5gd6f7p3::::res://Escenas/enemy.tscn<>uid://b44wwitfdrhat::::res://Imagenes/CaraPlayer1.png<>uid://c156ttlubdgmt::::res://Imagenes/interrogacion1.png<>uid://cmx588hlqasfn::::res://Imagenes/cuadro1.png<>uid://d4ado1l2si0x5::::res://Imagenes/CaraEnemigo1.png<>uid://co1v3r1maay1t::::res://Escenas/carta.tscn<>uid://bpfwn451y7hic::::res://Imagenes/flechasRuletaOff.png
-::res://Globales/::1717706552
-variables.gd::GDScript::-1::1717706552::0::1::::<>Node<>::
-::res://Imagenes/::1717439923
+::res://Escenas/::1718379818
+carta.tscn::PackedScene::5810484992608763495::1718379777::0::1::::<><>::uid://hm1ch2apnt2g::::res://Imagenes/Carta1.png
+enemy.tscn::PackedScene::7843215558626149138::1718213234::0::1::::<><>::uid://cgo8trpjcuqpn
+menu.gd::GDScript::-1::1718295978::0::1::::<>Node2D<>::
+menu.tscn::PackedScene::285911041655879584::1718379776::0::1::::<><>::uid://dpct58iufdoqq::::res://Imagenes/Boton1.png<>res://Escenas/menu.gd<>uid://cvsnm1m6iyx7::::res://Imagenes/sky bridge.png
+player.tscn::PackedScene::7826091185808927825::1718213234::0::1::::<><>::res://Scripts/player.gd<>uid://6ubnho284m42
+principal.tscn::PackedScene::2779365607990920089::1718379818::0::1::::<><>::res://Scripts/principal.gd<>uid://bld1asclstaxx::::res://Imagenes/bamboo bridge.png<>uid://djratwwm4s7k4::::res://Escenas/player.tscn<>uid://dj0ku5gd6f7p3::::res://Escenas/enemy.tscn<>uid://b44wwitfdrhat::::res://Imagenes/CaraPlayer1.png<>uid://c156ttlubdgmt::::res://Imagenes/interrogacion1.png<>uid://cmx588hlqasfn::::res://Imagenes/cuadro1.png<>uid://d4ado1l2si0x5::::res://Imagenes/CaraEnemigo1.png<>uid://cf1m3wuxspr1a::::res://Imagenes/calavera1.png<>uid://cfyd3nhhyrxw2::::res://Imagenes/recuperaSalud1.png<>uid://co1v3r1maay1t::::res://Escenas/carta.tscn<>uid://bpfwn451y7hic::::res://Imagenes/flechasRuletaOff.png<>uid://bv6auu7a2nem2::::res://Imagenes/aumento1.png
+tutorial.gd::GDScript::-1::1718376348::0::1::::<>Node2D<>::
+tutorial.tscn::PackedScene::4473017772875520632::1718379776::0::1::::<><>::res://Escenas/tutorial.gd<>uid://bo7usl8idhyt3::::res://Imagenes/castle bridge.png<>uid://8sfvmb8ul5hi::::res://Imagenes/flechaDerecha.png<>uid://blkqt8ist5iol::::res://Imagenes/vidaLlena.png<>uid://b44wwitfdrhat::::res://Imagenes/CaraPlayer1.png<>uid://d4ado1l2si0x5::::res://Imagenes/CaraEnemigo1.png<>uid://cilhtlcs5huwi::::res://Imagenes/vidaVacia.png<>uid://385ndpslp3wf::::res://Imagenes/vidaEscudo.png<>uid://dsxqlart4ym3t::::res://Imagenes/ejemplo1.PNG<>uid://da1b0cvubaghc::::res://Imagenes/ejemplo2.PNG<>uid://cch2xyk6yyji4::::res://Imagenes/ataque.png<>uid://bgely3jlywmil::::res://Imagenes/curar.png<>uid://bpvxdtgjol40::::res://Imagenes/regeneracion.png<>uid://c7cgge02hksf3::::res://Imagenes/envenenar.png<>uid://b55wyx750dv16::::res://Imagenes/aumentarDaño.png<>uid://cq6yu6bh756qy::::res://Imagenes/ejemplo3.PNG<>uid://bvre5lpj3qxvw::::res://Imagenes/ejemplo4.PNG<>uid://by7a474wwiscc::::res://Imagenes/ejemplo5.PNG<>uid://bdq1e3ct5ypbh::::res://Imagenes/ejemplo6.PNG<>uid://cmx588hlqasfn::::res://Imagenes/cuadro1.png<>uid://cf1m3wuxspr1a::::res://Imagenes/calavera1.png<>uid://cfyd3nhhyrxw2::::res://Imagenes/recuperaSalud1.png<>uid://bv6auu7a2nem2::::res://Imagenes/aumento1.png<>uid://3x8rdeh2pifn::::res://Imagenes/boton2.png
+::res://Fonts/::1718295716
+Straight pixel gothic.otf::FontFile::5496320869679934938::1718295716::1718295716::1::::<><>::
+::res://Globales/::1717726710
+variables.gd::GDScript::-1::1717726710::0::1::::<>Node<>::
+::res://Imagenes/::1718379924
 ataque.png::CompressedTexture2D::4929351408455164273::1717438368::1717438368::1::::<><>::
 aumentarDaño.png::CompressedTexture2D::4555397217217854415::1717438368::1717438368::1::::<><>::
+aumento1.png::CompressedTexture2D::3924418926283073371::1718314198::1718314279::1::::<><>::
+bamboo bridge.png::CompressedTexture2D::3166270687820067389::1718335275::1718335279::1::::<><>::
+Boton1.png::CompressedTexture2D::8217432404382133072::1718294583::1718294588::1::::<><>::
+boton2.png::CompressedTexture2D::2014802493569954271::1718317076::1718317084::1::::<><>::
+calavera1.png::CompressedTexture2D::5178239200803923248::1718314124::1718314136::1::::<><>::
 CaraEnemigo1.png::CompressedTexture2D::9194947052526317200::1717200458::1717200459::1::::<><>::
 CaraPlayer1.png::CompressedTexture2D::4483139615140491079::1717200458::1717200459::1::::<><>::
 Carta1.png::CompressedTexture2D::517677061308430976::1717434486::1717434487::1::::<><>::
+carta2.png::CompressedTexture2D::189076001017161337::1718311859::1718311864::1::::<><>::
+castle bridge.png::CompressedTexture2D::3436371696004277930::1718296054::1718296057::1::::<><>::
 cuadro1.png::CompressedTexture2D::5664470364973198751::1717201491::1717201491::1::::<><>::
+cuadro1Rojo.png::CompressedTexture2D::3272576870062582173::1718379164::1718379165::1::::<><>::
 curar.png::CompressedTexture2D::2816523487601467419::1717438368::1717438368::1::::<><>::
 defender.png::CompressedTexture2D::5235854658682590705::1717438368::1717438368::1::::<><>::
+ejemplo1.PNG::CompressedTexture2D::8471133067689138219::1718299784::1718299785::1::::<><>::
+ejemplo2.PNG::CompressedTexture2D::7213041372922891224::1718299436::1718299758::1::::<><>::
+ejemplo3.PNG::CompressedTexture2D::5961353129805751492::1718311372::1718311372::1::::<><>::
+ejemplo4.PNG::CompressedTexture2D::3895777865074920284::1718312512::1718312513::1::::<><>::
+ejemplo5.PNG::CompressedTexture2D::4137066533734879790::1718312617::1718312617::1::::<><>::
+ejemplo6.PNG::CompressedTexture2D::2631604518307438949::1718313588::1718313589::1::::<><>::
 envenenar.png::CompressedTexture2D::7023388385981421934::1717438368::1717438368::1::::<><>::
+flechaDerecha.png::CompressedTexture2D::2353732359615548902::1718296409::1718296416::1::::<><>::
 flechasRuletaOff.png::CompressedTexture2D::3450935786931457390::1717439923::1717439923::1::::<><>::
 flechasRuletaOn.png::CompressedTexture2D::3393662027208765094::1717439923::1717439923::1::::<><>::
 fondo1.jpg::CompressedTexture2D::6343986384099638566::1717193426::1717193427::1::::<><>::
+Ganar.png::CompressedTexture2D::1344375739242381793::1718245559::1718379925::1::::<><>::
 interrogacion1.png::CompressedTexture2D::6661599807303462187::1717201209::1717201210::1::::<><>::
+Perder.png::CompressedTexture2D::1792406584236418536::1718245603::1718379922::1::::<><>::
+recuperaSalud1.png::CompressedTexture2D::5173563498849433483::1718314225::1718314233::1::::<><>::
 regeneracion.png::CompressedTexture2D::102470827263375263::1717438368::1717438368::1::::<><>::
+sky bridge.png::CompressedTexture2D::184846412333991102::1718295125::1718295129::1::::<><>::
 Sprite1.png::CompressedTexture2D::2217226030736452605::1717194831::1717194832::1::::<><>::
 Sprite2.png::CompressedTexture2D::5224914225098134891::1717196628::1717196629::1::::<><>::
 vidaEscudo.png::CompressedTexture2D::2035256994427913609::1717200458::1717200459::1::::<><>::
 vidaLlena.png::CompressedTexture2D::3180148889693918439::1717198867::1717198868::1::::<><>::
 vidaVacia.png::CompressedTexture2D::5357519802523364124::1717198867::1717198868::1::::<><>::
-::res://Scripts/::1717719865
+::res://Scripts/::1718379774
 enemy.gd::GDScript::-1::1717196801::0::1::::<>CharacterBody2D<>::
 player.gd::GDScript::-1::1717719476::0::1::::<>CharacterBody2D<>::
-principal.gd::GDScript::-1::1717719865::0::1::::<>Node2D<>::
+principal.gd::GDScript::-1::1718379774::0::1::::<>Node2D<>::

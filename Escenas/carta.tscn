@@ -22,6 +22,7 @@ offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_bbnsb")
+expand_mode = 1
 
 [node name="icono" type="TextureRect" parent="."]
 layout_mode = 1

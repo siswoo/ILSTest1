@@ -1,6 +1,6 @@
+res://Escenas/menu.tscn
+res://Escenas/tutorial.tscn
 res://Escenas/principal.tscn
-res://Scripts/principal.gd
-res://Escenas/player.tscn
-res://Escenas/enemy.tscn
 res://Escenas/carta.tscn
-res://Globales/variables.gd
+res://Escenas/tutorial.gd
+res://Scripts/principal.gd

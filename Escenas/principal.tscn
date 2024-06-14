@@ -1,22 +1,39 @@
-[gd_scene load_steps=11 format=3 uid="uid://bful0l14oh1o4"]
+[gd_scene load_steps=16 format=3 uid="uid://bful0l14oh1o4"]
 
 [ext_resource type="Script" path="res://Scripts/principal.gd" id="1_anwkp"]
-[ext_resource type="Texture2D" uid="uid://cwncr8na4g0d3" path="res://Imagenes/fondo1.jpg" id="2_rnkp3"]
+[ext_resource type="Texture2D" uid="uid://bld1asclstaxx" path="res://Imagenes/bamboo bridge.png" id="2_s2hx3"]
 [ext_resource type="PackedScene" uid="uid://djratwwm4s7k4" path="res://Escenas/player.tscn" id="3_ewf6b"]
 [ext_resource type="PackedScene" uid="uid://dj0ku5gd6f7p3" path="res://Escenas/enemy.tscn" id="4_djvmd"]
 [ext_resource type="Texture2D" uid="uid://b44wwitfdrhat" path="res://Imagenes/CaraPlayer1.png" id="5_r3n2c"]
 [ext_resource type="Texture2D" uid="uid://c156ttlubdgmt" path="res://Imagenes/interrogacion1.png" id="6_vfhvf"]
 [ext_resource type="Texture2D" uid="uid://cmx588hlqasfn" path="res://Imagenes/cuadro1.png" id="7_0motr"]
 [ext_resource type="Texture2D" uid="uid://d4ado1l2si0x5" path="res://Imagenes/CaraEnemigo1.png" id="7_hjdr0"]
+[ext_resource type="Texture2D" uid="uid://cf1m3wuxspr1a" path="res://Imagenes/calavera1.png" id="8_7xqv5"]
+[ext_resource type="Texture2D" uid="uid://cfyd3nhhyrxw2" path="res://Imagenes/recuperaSalud1.png" id="9_pq4m2"]
 [ext_resource type="PackedScene" uid="uid://co1v3r1maay1t" path="res://Escenas/carta.tscn" id="9_v6ayt"]
 [ext_resource type="Texture2D" uid="uid://bpfwn451y7hic" path="res://Imagenes/flechasRuletaOff.png" id="10_mxpww"]
+[ext_resource type="Texture2D" uid="uid://bv6auu7a2nem2" path="res://Imagenes/aumento1.png" id="10_ubck3"]
+[ext_resource type="Texture2D" uid="uid://tfhw33wtw3gf" path="res://Imagenes/Ganar.png" id="14_w4s34"]
+[ext_resource type="Texture2D" uid="uid://3x8rdeh2pifn" path="res://Imagenes/boton2.png" id="15_5vcd5"]
 
 [node name="Principal" type="Node2D"]
 script = ExtResource("1_anwkp")
 
-[node name="Background" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("2_rnkp3")
+[node name="Fondo" type="TextureRect" parent="."]
+modulate = Color(0.890196, 0.890196, 0.890196, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -290.0
+offset_right = 600.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2hx3")
+expand_mode = 1
 
 [node name="player" parent="." instance=ExtResource("3_ewf6b")]
 position = Vector2(-130, 80)
@@ -257,6 +274,22 @@ text = "- 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="icono" type="TextureRect" parent="HUD_jugador/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -20.0
+offset_right = 75.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_7xqv5")
+expand_mode = 1
+
 [node name="TemporalCura" type="Panel" parent="HUD_jugador"]
 offset_left = -460.0
 offset_top = -40.0
@@ -292,6 +325,22 @@ text = "+ 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="icono" type="TextureRect" parent="HUD_jugador/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -20.0
+offset_right = 75.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_pq4m2")
+expand_mode = 1
+
 [node name="TemporalBonus" type="Panel" parent="HUD_jugador"]
 offset_left = -460.0
 offset_top = 30.0
@@ -326,6 +375,22 @@ grow_vertical = 2
 text = "> 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="icono" type="TextureRect" parent="HUD_jugador/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -20.0
+offset_right = 75.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_ubck3")
+expand_mode = 1
 
 [node name="HUD_enemigo" type="Node" parent="."]
 
@@ -521,9 +586,9 @@ texture = ExtResource("6_vfhvf")
 expand_mode = 1
 
 [node name="TemporalDaño" type="Panel" parent="HUD_enemigo"]
-offset_left = 390.0
+offset_left = 420.0
 offset_top = -110.0
-offset_right = 440.0
+offset_right = 470.0
 offset_bottom = -60.0
 
 [node name="cuadro" type="TextureRect" parent="HUD_enemigo/TemporalDaño"]
@@ -555,10 +620,26 @@ text = "- 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="icono" type="TextureRect" parent="HUD_enemigo/TemporalDaño"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -20.0
+offset_right = -45.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_7xqv5")
+expand_mode = 1
+
 [node name="TemporalCura" type="Panel" parent="HUD_enemigo"]
-offset_left = 390.0
+offset_left = 420.0
 offset_top = -40.0
-offset_right = 440.0
+offset_right = 470.0
 offset_bottom = 10.0
 
 [node name="cuadro" type="TextureRect" parent="HUD_enemigo/TemporalCura"]
@@ -590,10 +671,26 @@ text = "+ 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="icono" type="TextureRect" parent="HUD_enemigo/TemporalCura"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -20.0
+offset_right = -45.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_pq4m2")
+expand_mode = 1
+
 [node name="TemporalBonus" type="Panel" parent="HUD_enemigo"]
-offset_left = 390.0
+offset_left = 420.0
 offset_top = 30.0
-offset_right = 440.0
+offset_right = 470.0
 offset_bottom = 80.0
 
 [node name="cuadro" type="TextureRect" parent="HUD_enemigo/TemporalBonus"]
@@ -625,6 +722,22 @@ text = "> 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="icono" type="TextureRect" parent="HUD_enemigo/TemporalBonus"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -20.0
+offset_right = -45.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_ubck3")
+expand_mode = 1
+
 [node name="Fase" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
@@ -649,7 +762,7 @@ offset_bottom = -100.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "10"
+text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -858,42 +971,75 @@ vertical_alignment = 1
 [node name="CondicionJuego" type="Node2D" parent="."]
 visible = false
 
-[node name="jugadorMuerto" type="Label" parent="CondicionJuego"]
-visible = false
+[node name="imagen" type="TextureRect" parent="CondicionJuego"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -241.0
-offset_top = -141.5
-offset_right = 241.0
-offset_bottom = 141.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "HAS MUERTO"
+texture = ExtResource("14_w4s34")
+expand_mode = 1
+
+[node name="RepetirB" type="Button" parent="CondicionJuego"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 250.0
+offset_top = 150.0
+offset_right = 450.0
+offset_bottom = 250.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="CondicionJuego/RepetirB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_5vcd5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CondicionJuego/RepetirB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "SALIR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="enemigoMuerto" type="Label" parent="CondicionJuego"]
-visible = false
+[node name="Descripcion" type="RichTextLabel" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -241.0
-offset_top = -141.5
-offset_right = 241.0
-offset_bottom = 141.5
+offset_left = -150.0
+offset_top = -80.0
+offset_right = 150.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "HAS GANADO"
-horizontal_alignment = 1
-vertical_alignment = 1
+bbcode_enabled = true
+text = "DESCRIPCIÓN DEL TEXTO"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
+[connection signal="pressed" from="CondicionJuego/RepetirB" to="." method="_on_repetir_b_pressed"]
