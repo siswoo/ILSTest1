@@ -1,7 +1,5 @@
-res://Escenas/menu.tscn
 res://Escenas/tutorial.tscn
+res://Globales/variables.gd
+res://Escenas/menu.tscn
 res://Escenas/principal.tscn
 res://Escenas/carta.tscn
-res://Scripts/principal.gd
-res://Globales/variables.gd
-res://Escenas/tutorial.gd

@@ -2,7 +2,7 @@ extends Node
 var vidaJugador: int = 10
 var vidaEnemigo: int = 10
 var saludJugador: int = 10
-var saludEnemigo: int = 2
+var saludEnemigo: int = 10
 var proteccionJugador: int = 0
 var proteccionEnemigo: int = 0
 var regeneracionesJugador: int = 0
