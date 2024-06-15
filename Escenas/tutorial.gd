@@ -152,8 +152,8 @@ func ubicacionFlechas() -> void:
 		atras_b.position = Vector2(200,500)
 	
 func vistaHud() -> void:
-	omitir_b.visible = true
 	if etapa == 1:
+		omitir_b.visible = true
 		icono_jugador.visible = false
 		icono_enemigo.visible = false
 		for i in 6:

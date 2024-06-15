@@ -1,21 +1,21 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718379925
-export_presets.cfg::TextFile::-1::1717727266::0::1::::<><>::
+::res://::1718457980
+export_presets.cfg::TextFile::-1::1718381379::0::1::::<><>::
 icon.svg::CompressedTexture2D::2654236420108110349::1717179897::1717179905::1::::<><>::
-::res://Escenas/::1718379818
-carta.tscn::PackedScene::5810484992608763495::1718379777::0::1::::<><>::uid://hm1ch2apnt2g::::res://Imagenes/Carta1.png
+::res://Escenas/::1718423455
+carta.tscn::PackedScene::5810484992608763495::1718423455::0::1::::<><>::uid://hm1ch2apnt2g::::res://Imagenes/Carta1.png
 enemy.tscn::PackedScene::7843215558626149138::1718213234::0::1::::<><>::uid://cgo8trpjcuqpn
 menu.gd::GDScript::-1::1718295978::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::285911041655879584::1718379776::0::1::::<><>::uid://dpct58iufdoqq::::res://Imagenes/Boton1.png<>res://Escenas/menu.gd<>uid://cvsnm1m6iyx7::::res://Imagenes/sky bridge.png
+menu.tscn::PackedScene::285911041655879584::1718423454::0::1::::<><>::uid://dpct58iufdoqq::::res://Imagenes/Boton1.png<>res://Escenas/menu.gd<>uid://cvsnm1m6iyx7::::res://Imagenes/sky bridge.png
 player.tscn::PackedScene::7826091185808927825::1718213234::0::1::::<><>::res://Scripts/player.gd<>uid://6ubnho284m42
-principal.tscn::PackedScene::2779365607990920089::1718379818::0::1::::<><>::res://Scripts/principal.gd<>uid://bld1asclstaxx::::res://Imagenes/bamboo bridge.png<>uid://djratwwm4s7k4::::res://Escenas/player.tscn<>uid://dj0ku5gd6f7p3::::res://Escenas/enemy.tscn<>uid://b44wwitfdrhat::::res://Imagenes/CaraPlayer1.png<>uid://c156ttlubdgmt::::res://Imagenes/interrogacion1.png<>uid://cmx588hlqasfn::::res://Imagenes/cuadro1.png<>uid://d4ado1l2si0x5::::res://Imagenes/CaraEnemigo1.png<>uid://cf1m3wuxspr1a::::res://Imagenes/calavera1.png<>uid://cfyd3nhhyrxw2::::res://Imagenes/recuperaSalud1.png<>uid://co1v3r1maay1t::::res://Escenas/carta.tscn<>uid://bpfwn451y7hic::::res://Imagenes/flechasRuletaOff.png<>uid://bv6auu7a2nem2::::res://Imagenes/aumento1.png
-tutorial.gd::GDScript::-1::1718376348::0::1::::<>Node2D<>::
-tutorial.tscn::PackedScene::4473017772875520632::1718379776::0::1::::<><>::res://Escenas/tutorial.gd<>uid://bo7usl8idhyt3::::res://Imagenes/castle bridge.png<>uid://8sfvmb8ul5hi::::res://Imagenes/flechaDerecha.png<>uid://blkqt8ist5iol::::res://Imagenes/vidaLlena.png<>uid://b44wwitfdrhat::::res://Imagenes/CaraPlayer1.png<>uid://d4ado1l2si0x5::::res://Imagenes/CaraEnemigo1.png<>uid://cilhtlcs5huwi::::res://Imagenes/vidaVacia.png<>uid://385ndpslp3wf::::res://Imagenes/vidaEscudo.png<>uid://dsxqlart4ym3t::::res://Imagenes/ejemplo1.PNG<>uid://da1b0cvubaghc::::res://Imagenes/ejemplo2.PNG<>uid://cch2xyk6yyji4::::res://Imagenes/ataque.png<>uid://bgely3jlywmil::::res://Imagenes/curar.png<>uid://bpvxdtgjol40::::res://Imagenes/regeneracion.png<>uid://c7cgge02hksf3::::res://Imagenes/envenenar.png<>uid://b55wyx750dv16::::res://Imagenes/aumentarDaño.png<>uid://cq6yu6bh756qy::::res://Imagenes/ejemplo3.PNG<>uid://bvre5lpj3qxvw::::res://Imagenes/ejemplo4.PNG<>uid://by7a474wwiscc::::res://Imagenes/ejemplo5.PNG<>uid://bdq1e3ct5ypbh::::res://Imagenes/ejemplo6.PNG<>uid://cmx588hlqasfn::::res://Imagenes/cuadro1.png<>uid://cf1m3wuxspr1a::::res://Imagenes/calavera1.png<>uid://cfyd3nhhyrxw2::::res://Imagenes/recuperaSalud1.png<>uid://bv6auu7a2nem2::::res://Imagenes/aumento1.png<>uid://3x8rdeh2pifn::::res://Imagenes/boton2.png
+principal.tscn::PackedScene::2779365607990920089::1718423455::0::1::::<><>::res://Scripts/principal.gd<>uid://bld1asclstaxx::::res://Imagenes/bamboo bridge.png<>uid://djratwwm4s7k4::::res://Escenas/player.tscn<>uid://dj0ku5gd6f7p3::::res://Escenas/enemy.tscn<>uid://b44wwitfdrhat::::res://Imagenes/CaraPlayer1.png<>uid://c156ttlubdgmt::::res://Imagenes/interrogacion1.png<>uid://cmx588hlqasfn::::res://Imagenes/cuadro1.png<>uid://d4ado1l2si0x5::::res://Imagenes/CaraEnemigo1.png<>uid://cf1m3wuxspr1a::::res://Imagenes/calavera1.png<>uid://cfyd3nhhyrxw2::::res://Imagenes/recuperaSalud1.png<>uid://co1v3r1maay1t::::res://Escenas/carta.tscn<>uid://bpfwn451y7hic::::res://Imagenes/flechasRuletaOff.png<>uid://bv6auu7a2nem2::::res://Imagenes/aumento1.png<>uid://tfhw33wtw3gf::::res://Imagenes/Ganar.png
+tutorial.gd::GDScript::-1::1718423450::0::1::::<>Node2D<>::
+tutorial.tscn::PackedScene::4473017772875520632::1718423455::0::1::::<><>::res://Escenas/tutorial.gd<>uid://bo7usl8idhyt3::::res://Imagenes/castle bridge.png<>uid://8sfvmb8ul5hi::::res://Imagenes/flechaDerecha.png<>uid://blkqt8ist5iol::::res://Imagenes/vidaLlena.png<>uid://b44wwitfdrhat::::res://Imagenes/CaraPlayer1.png<>uid://d4ado1l2si0x5::::res://Imagenes/CaraEnemigo1.png<>uid://cilhtlcs5huwi::::res://Imagenes/vidaVacia.png<>uid://385ndpslp3wf::::res://Imagenes/vidaEscudo.png<>uid://dsxqlart4ym3t::::res://Imagenes/ejemplo1.PNG<>uid://da1b0cvubaghc::::res://Imagenes/ejemplo2.PNG<>uid://cch2xyk6yyji4::::res://Imagenes/ataque.png<>uid://bgely3jlywmil::::res://Imagenes/curar.png<>uid://bpvxdtgjol40::::res://Imagenes/regeneracion.png<>uid://c7cgge02hksf3::::res://Imagenes/envenenar.png<>uid://b55wyx750dv16::::res://Imagenes/aumentarDaño.png<>uid://cq6yu6bh756qy::::res://Imagenes/ejemplo3.PNG<>uid://bvre5lpj3qxvw::::res://Imagenes/ejemplo4.PNG<>uid://by7a474wwiscc::::res://Imagenes/ejemplo5.PNG<>uid://bdq1e3ct5ypbh::::res://Imagenes/ejemplo6.PNG<>uid://cmx588hlqasfn::::res://Imagenes/cuadro1.png<>uid://cf1m3wuxspr1a::::res://Imagenes/calavera1.png<>uid://cfyd3nhhyrxw2::::res://Imagenes/recuperaSalud1.png<>uid://bv6auu7a2nem2::::res://Imagenes/aumento1.png<>uid://3x8rdeh2pifn::::res://Imagenes/boton2.png
 ::res://Fonts/::1718295716
 Straight pixel gothic.otf::FontFile::5496320869679934938::1718295716::1718295716::1::::<><>::
-::res://Globales/::1717726710
-variables.gd::GDScript::-1::1717726710::0::1::::<>Node<>::
-::res://Imagenes/::1718379924
+::res://Globales/::1718411311
+variables.gd::GDScript::-1::1718411311::0::1::::<>Node<>::
+::res://Imagenes/::1718379925
 ataque.png::CompressedTexture2D::4929351408455164273::1717438368::1717438368::1::::<><>::
 aumentarDaño.png::CompressedTexture2D::4555397217217854415::1717438368::1717438368::1::::<><>::
 aumento1.png::CompressedTexture2D::3924418926283073371::1718314198::1718314279::1::::<><>::
@@ -54,7 +54,7 @@ Sprite2.png::CompressedTexture2D::5224914225098134891::1717196628::1717196629::1
 vidaEscudo.png::CompressedTexture2D::2035256994427913609::1717200458::1717200459::1::::<><>::
 vidaLlena.png::CompressedTexture2D::3180148889693918439::1717198867::1717198868::1::::<><>::
 vidaVacia.png::CompressedTexture2D::5357519802523364124::1717198867::1717198868::1::::<><>::
-::res://Scripts/::1718379774
+::res://Scripts/::1718412088
 enemy.gd::GDScript::-1::1717196801::0::1::::<>CharacterBody2D<>::
 player.gd::GDScript::-1::1717719476::0::1::::<>CharacterBody2D<>::
-principal.gd::GDScript::-1::1718379774::0::1::::<>Node2D<>::
+principal.gd::GDScript::-1::1718412088::0::1::::<>Node2D<>::

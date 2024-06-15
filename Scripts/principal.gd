@@ -13,6 +13,7 @@ extends Node2D
 @onready var timer_3: Timer = $Timer3
 @onready var condicion_juego: Node2D = $CondicionJuego
 @onready var descripcion: RichTextLabel = $Descripcion
+@onready var timer_4: Timer = $Timer4
 var tiempoInicial: int = 20
 var tiempoRestante: int = 0
 var puestoRuleta: int = 0
@@ -438,7 +439,9 @@ func condicionJuego():
 		generarVidas()
 		info_jugador.get_node("Label").text = ""
 		info_enemigo.get_node("Label").text = ""
-		get_tree().paused = true
+		fase.visible = false
+		descripcion.visible = false
+		timer_4.start()
 		return false
 	if VARIABLES.saludEnemigo <= 0:
 		condicion_juego.visible = true
@@ -450,7 +453,9 @@ func condicionJuego():
 		generarVidas()
 		info_jugador.get_node("Label").text = ""
 		info_enemigo.get_node("Label").text = ""
-		get_tree().paused = true
+		fase.visible = false
+		descripcion.visible = false
+		timer_4.start()
 		return false
 	return true
 
@@ -543,5 +548,5 @@ func ejecutarTemporales():
 	await get_tree().create_timer(2.0).timeout
 	nuevaRonda()
 
-func _on_repetir_b_pressed() -> void:
+func _on_timer_4_timeout() -> void:
 	get_tree().quit()

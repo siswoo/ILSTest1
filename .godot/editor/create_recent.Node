@@ -1,3 +1,4 @@
+Timer
 Label
 TextureRect
 Button
@@ -8,7 +9,6 @@ CanvasLayer
 Node
 Node2D
 Container
-Timer
 Control
 Panel
 CollisionShape2D

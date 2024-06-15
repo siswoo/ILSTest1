@@ -1,4 +1,6 @@
-res://Escenas/carta.tscn::cac1c591a07be98daf7f3bb47261c4de::1717727034::res://.godot/exported/133200997/export-10002670dcfed28a4dc8b3a5d1865de1-carta.scn
-res://Escenas/enemy.tscn::1429da176e496533fbd75844684d6c03::1717727034::res://.godot/exported/133200997/export-80971cc2c0ec156d00180e558dc6bbde-enemy.scn
-res://Escenas/player.tscn::a7d48abd51d1ebab89ad5d772b6bd43a::1717727034::res://.godot/exported/133200997/export-68c8f790c85af3808910a7e6a36483fd-player.scn
-res://Escenas/principal.tscn::a86e76efe0613c8b9e09cd77ec79d937::1717727201::res://.godot/exported/133200997/export-f2fc2ad249376e4582217243c6fcf3a9-principal.scn
+res://Escenas/carta.tscn::932bf01d07b9914f5031ff7412c97f33::1718381242::res://.godot/exported/133200997/export-10002670dcfed28a4dc8b3a5d1865de1-carta.scn
+res://Escenas/enemy.tscn::1429da176e496533fbd75844684d6c03::1718213234::res://.godot/exported/133200997/export-80971cc2c0ec156d00180e558dc6bbde-enemy.scn
+res://Escenas/player.tscn::a7d48abd51d1ebab89ad5d772b6bd43a::1718213234::res://.godot/exported/133200997/export-68c8f790c85af3808910a7e6a36483fd-player.scn
+res://Escenas/principal.tscn::f54965ae34bb22d95e5693c9bcb23635::1718381274::res://.godot/exported/133200997/export-f2fc2ad249376e4582217243c6fcf3a9-principal.scn
+res://Escenas/menu.tscn::a43043ab549f8ff0375b7c31e874e31e::1718381242::res://.godot/exported/133200997/export-7f0bc7d4221826a298e8273d5042602e-menu.scn
+res://Escenas/tutorial.tscn::3a3c99b0de78313f6ad4c23694e6dbd3::1718381242::res://.godot/exported/133200997/export-0f179debace99576ed2b9d67989a2aaa-tutorial.scn
